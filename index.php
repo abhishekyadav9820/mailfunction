@@ -16,7 +16,7 @@ require 'src/SMTP.php';
 
 
 $servername = "localhost";
-$username = "root";
+$username = ""; 
 $password = "";
 
 
@@ -92,16 +92,16 @@ function sendEmail($to, $subject, $body) {
         $mail->isSMTP();                                    // Send using SMTP
         $mail->Host       = 'smtp.gmail.com';               // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                           // Enable SMTP authentication
-        $mail->Username   = 'ay321999@gmail.com';           // SMTP username
-        $mail->Password   = 'ulhn qgwh obdc tobx';          // SMTP password
+        $mail->Username   = 'example@gmail.com';           // SMTP username
+        $mail->Password   = 'genrate key';          // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    // Enable implicit TLS encryption
         $mail->Port       = 465;                            // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         // Recipients
-        $mail->setFrom('ay321999@gmail.com',"Abhishek Yadav");
+        $mail->setFrom('from@gmail.com',"mailler name");
         $mail->addAddress($to);                             // Add a recipient
 
-        //  $mail->addReplyTo('ay321999@gamil.com', 'Information');
+        //  $mail->addReplyTo('from@gamil.com', 'Information');
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
 
